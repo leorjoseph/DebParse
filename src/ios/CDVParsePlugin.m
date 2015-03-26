@@ -75,6 +75,8 @@
 
 - (void)unsubscribe: (CDVInvokedUrlCommand *)command
 {
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Info" message:@"Native unsubscribe" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
     CDVPluginResult* pluginResult = nil;
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     NSString *channel = [command.arguments objectAtIndex:0];
@@ -87,6 +89,8 @@
 -(void)getnotifications:(CDVInvokedUrlCommand *)command
 
 {
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Info" message:@"Native getnotifications" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
     NSUserDefaults *usserde=[NSUserDefaults standardUserDefaults];
     NSArray *ar=[usserde valueForKey:@"pushMessage"];
     
@@ -105,6 +109,8 @@
 
 -(void)updateReadmessage:(CDVInvokedUrlCommand *)command
 {
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Info" message:@"Native updateReadmessage" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
     NSUserDefaults *usserde=[NSUserDefaults standardUserDefaults];
     NSArray *ar=[usserde valueForKey:@"pushMessage"];
     

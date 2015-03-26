@@ -9,6 +9,7 @@ initialize: function(appId, clientKey, successCallback, errorCallback) {
                  );
 },
 getnotifications: function(successCallback, errorCallback) {
+    alert('JS getnotifications');
    cordova.exec(
                 successCallback,
                 errorCallback,
@@ -17,15 +18,17 @@ getnotifications: function(successCallback, errorCallback) {
                 []
                 );
    },
-        updatereadStatus: function(id,flag,successCallback, errorCallback) {
-               cordova.exec(
-                            successCallback,
-                            errorCallback,
-                            'ParsePlugin',
-                            'updateReadmessage',
-                            [id,flag]
-                            );
-               },
+updatereadStatus: function(id,flag,successCallback, errorCallback) {
+        alert('JS updatereadStatus');
+
+       cordova.exec(
+                    successCallback,
+                    errorCallback,
+                    'ParsePlugin',
+                    'updateReadmessage',
+                    [id,flag]
+                    );
+       },
 getInstallationId: function(successCallback, errorCallback) {
     cordova.exec(
                  successCallback,
@@ -67,6 +70,8 @@ subscribe: function(channel, successCallback, errorCallback) {
 },
     
 unsubscribe: function(channel, successCallback, errorCallback) {
+    alert('JS unsubscribe');
+
     cordova.exec(
                  successCallback,
                  errorCallback,
