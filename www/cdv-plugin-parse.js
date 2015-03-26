@@ -9,7 +9,6 @@ initialize: function(appId, clientKey, successCallback, errorCallback) {
                  );
 },
 getnotifications: function(successCallback, errorCallback) {
-    alert('JS getnotifications');
    cordova.exec(
                 successCallback,
                 errorCallback,
@@ -19,8 +18,6 @@ getnotifications: function(successCallback, errorCallback) {
                 );
    },
 updatereadStatus: function(id,flag,successCallback, errorCallback) {
-        alert('JS updatereadStatus');
-
        cordova.exec(
                     successCallback,
                     errorCallback,
@@ -70,7 +67,6 @@ subscribe: function(channel, successCallback, errorCallback) {
 },
     
 unsubscribe: function(channel, successCallback, errorCallback) {
-    alert('JS unsubscribe');
 
     cordova.exec(
                  successCallback,
